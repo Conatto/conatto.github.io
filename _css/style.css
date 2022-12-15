@@ -21,6 +21,19 @@ hr {
     border-color: greenyellow;
     width: 100%;
 }
+a.backBtn {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 3rem;
+}
+i {
+    font-size: 3rem;
+    opacity: .6;
+}
+    i:hover {
+        color: white;
+    }
 
 h1 { font-size: 3rem; }
 h2 { font-size: 2rem; }
@@ -57,6 +70,8 @@ footer {
 }
 #welcome { 
     text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
 }
 .tile-frame {
     display: grid;
@@ -83,15 +98,15 @@ footer {
 .card {
     display: grid;
     height: 100%;
-    grid-template-rows: 3rem 10rem 1rem auto 2rem;
+    grid-template-rows: 3rem 10rem 3rem auto 2rem;
     gap: .5rem;
 }
-.card-title, .card-image, .card-content {
+.card-head, .card-image, .card-content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card-title {
+.card-head {
     justify-content: space-between;
     align-items: center;
 }
@@ -102,6 +117,19 @@ footer {
     border-radius: .5rem;
     box-shadow: 1px 1px 3px black;
 }
+.card-tagfield {
+    display: flex;
+    height: fit-content;
+    padding: .5rem 1rem;
+    border-top: 2px solid greenyellow;
+}
+    .card-tagfield > span {
+        margin: .25rem;
+    }
+    .card-tagfield > p {
+        margin-top: .25rem;
+        margin-left:.5rem;
+    }
 .card-content { 
     text-align: justify;
     align-items: start;
@@ -135,5 +163,66 @@ footer {
 .footer-center {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: 5rem 0;
+}
+.board {
+    display: flex;
+    background: #444;
+    width: 95%;
+    height: 45%;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px black;
+}
+.board-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .board-head > img {
+        border-radius: 1rem;
+        box-shadow: 1px 1px 3px black;
+    }
+.board-body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-left: 2px solid greenyellow;
+    margin-left: 1rem;
+    padding: 1rem 2rem;
+}
+.board-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15%;
+}
+    .board-header > * {
+        margin: 0;
+    }
+.board-tagfield {
+    display: flex;
+    height: fit-content;
+    padding: .5rem 1rem;
+}
+    .board-tagfield > * {
+        margin: .25rem;
+    }
+.board-content {
+    height: 100%;
+    text-align: justify;
+}
+.tag {
+    display: flex;
+    background-color: rgba(10, 10, 10, .1);
+    color: #FF8552;
+    height: 1.5rem;
+    font-size: .75rem;
+    border-radius: .5rem;
+    padding: 0 .75rem;
     align-items: center;
 }

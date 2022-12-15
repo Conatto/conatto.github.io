@@ -1,11 +1,16 @@
 const animationList = ['fadeInUp'];
 const welcomeMessage = ["Olá!", "Conheça meus projetos"]
+let animationDelay = 1500;
 
 window.onload = function() {
+    if (document.getElementsByTagName('title')[0].innerHTML === "Projetos") {
+        animationDelay = 0;
+    }
+    
     setTimeout(() => {
         observerTo('animation-children', animateObserver);
         document.getElementsByTagName('html')[0].style.overflowY = 'scroll'
-    }, 2000)
+    }, animationDelay)
 
     new TypeIt("#welcome", {
         strings: welcomeMessage,
