@@ -12,11 +12,13 @@ window.onload = function() {
         document.getElementsByTagName('html')[0].style.overflowY = 'scroll'
     }, animationDelay)
 
-    new TypeIt("#welcome", {
-        strings: welcomeMessage,
-        speed: 25,
-        waitUntilVisible: true,
-    }).go();
+    if (document.getElementById('welcome') !== null) {
+        new TypeIt("#welcome", {
+            strings: welcomeMessage,
+            speed: 25,
+            waitUntilVisible: true,
+        }).go();   
+    }
 }
 
 const animateObserver = new IntersectionObserver((entries) => {
