@@ -1,16 +1,26 @@
 const animationList = ['fadeInUp'];
 const welcomeMessage = ["Olá!", "Conheça meus projetos"]
 let animationDelay = 1500;
+let allowScroll = true;
 
 window.onload = function() {
     if (document.getElementsByTagName('title')[0].innerHTML === "Projetos") {
-        animationDelay = 0;
+        animationDelay = 0; allowScroll = false;
     }
     
     setTimeout(() => {
         observerTo('animation-children', animateObserver);
-        document.getElementsByTagName('html')[0].style.overflowY = 'scroll'
+        if (allowScroll) {
+            document.getElementsByTagName('html')[0].style.overflowY = 'scroll'
+        }
     }, animationDelay)
+
+    const labels = Array.from(document.getElementsByClassName('board-item'));
+    if (labels.length > 0 || labels !== null) {
+        labels.forEach(label => {
+            addEvent(label, 'click', () => { changeSceneBoard(label); });
+        });
+    }
 
     if (document.getElementById('welcome') !== null) {
         new TypeIt("#welcome", {
@@ -19,6 +29,28 @@ window.onload = function() {
             waitUntilVisible: true,
         }).go();   
     }
+}
+
+const changeSceneBoard = (next) => {
+    const section = document.getElementById(next.dataset.section);
+    const currentScene = section.querySelector('.current-scene');
+    const scenes = Array.from(section.querySelectorAll('.board-content'));
+    const nextScene = scenes[next.dataset.scene-1];
+
+    if (currentScene.classList.contains('animate__fadeInDown')) {
+        currentScene.classList.remove('animate__fadeInDown');
+    }
+    currentScene.classList.remove('current-scene');
+    currentScene.classList.add('animate__fadeOutDown');
+
+    if (nextScene.classList.contains('hidden')) {
+        nextScene.classList.remove('hidden');
+    }
+    if (nextScene.classList.contains('animate__fadeOutDown')) {
+        nextScene.classList.remove('animate__fadeOutDown');
+    }
+    nextScene.classList.add('animate__fadeInDown');
+    nextScene.classList.add('current-scene');
 }
 
 const animateObserver = new IntersectionObserver((entries) => {
