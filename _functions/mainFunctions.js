@@ -1,4 +1,6 @@
 const animationList = ['fadeInUp'];
+const animateShowUpScene = "animate__fadeIn"
+const animateShowOutScene = "animate__fadeOut"
 const welcomeMessage = ["Olá!", "Conheça meus projetos"]
 let animationDelay = 1500;
 let allowScroll = true;
@@ -6,6 +8,7 @@ let allowScroll = true;
 window.onload = function() {
     if (document.getElementsByTagName('title')[0].innerHTML === "Projetos") {
         animationDelay = 0; allowScroll = false;
+        bindDropdownEvents();
     }
     
     setTimeout(() => {
@@ -13,14 +16,7 @@ window.onload = function() {
         if (allowScroll) {
             document.getElementsByTagName('html')[0].style.overflowY = 'scroll'
         }
-    }, animationDelay)
-
-    const labels = Array.from(document.getElementsByClassName('board-item'));
-    if (labels.length > 0 || labels !== null) {
-        labels.forEach(label => {
-            addEvent(label, 'click', () => { changeSceneBoard(label); });
-        });
-    }
+    }, animationDelay);
 
     if (document.getElementById('welcome') !== null) {
         new TypeIt("#welcome", {
@@ -31,25 +27,69 @@ window.onload = function() {
     }
 }
 
+const bindDropdownEvents = () => {
+    const dropdownButtons = Array.from(document.getElementsByClassName('dropdown-button'));
+    if (dropdownButtons.length > 0 || dropdownButtons !== null) {
+        dropdownButtons.forEach(button => {
+            addEvent(button, 'click', () => { toggleDropdown(button); });
+        });
+    }
+    const labels = Array.from(document.getElementsByClassName('menu-item'));
+    if (labels.length > 0 || labels !== null) {
+        labels.forEach(label => {
+            addEvent(label, 'click', () => {
+                changeSceneBoard(label);
+                updateDropdownSelectedEl(label);
+            });
+        });
+    }
+    addEvent(document, 'click', () => { closeAllDropdowns(window.event.target); });
+}
+const toggleDropdown = (button) => {
+    const dropdowns = Array.from(document.getElementsByClassName('dropdown-content'));
+    dropdowns.forEach((ol, index) => {
+        if (index === Number(button.dataset.index)) {
+            ol.classList.toggle('show');
+        }
+    });
+}
+const updateDropdownSelectedEl = (labelSelected) => {
+    const section = document.getElementById(labelSelected.dataset.section);
+    const buttonValue = section.getElementsByClassName('dropdown-selected')[0];
+    buttonValue.textContent = labelSelected.textContent; 
+}
+const closeAllDropdowns = (element) => {
+    if (element.classList.contains('dropdown-button')
+        && !element.classList.contains('show')) {
+        return
+    }
+    const dropdowns = Array.from(document.getElementsByClassName('dropdown-content'));
+    dropdowns.forEach(ol => {
+        if (ol.classList.contains('show')) {
+            ol.classList.remove('show');
+        }
+    });
+}
+
 const changeSceneBoard = (next) => {
     const section = document.getElementById(next.dataset.section);
     const currentScene = section.querySelector('.current-scene');
     const scenes = Array.from(section.querySelectorAll('.board-content'));
     const nextScene = scenes[next.dataset.scene-1];
 
-    if (currentScene.classList.contains('animate__fadeInDown')) {
-        currentScene.classList.remove('animate__fadeInDown');
+    if (currentScene.classList.contains(animateShowUpScene)) {
+        currentScene.classList.remove(animateShowUpScene);
     }
     currentScene.classList.remove('current-scene');
-    currentScene.classList.add('animate__fadeOutDown');
+    currentScene.classList.add(animateShowOutScene);
 
     if (nextScene.classList.contains('hidden')) {
         nextScene.classList.remove('hidden');
     }
-    if (nextScene.classList.contains('animate__fadeOutDown')) {
-        nextScene.classList.remove('animate__fadeOutDown');
+    if (nextScene.classList.contains(animateShowOutScene)) {
+        nextScene.classList.remove(animateShowOutScene);
     }
-    nextScene.classList.add('animate__fadeInDown');
+    nextScene.classList.add(animateShowUpScene);
     nextScene.classList.add('current-scene');
 }
 
@@ -64,7 +104,7 @@ const animateObserver = new IntersectionObserver((entries) => {
         }
     }, { threshold: .5 });
 });
-function animateChainedEffect(arr, element, delay) {
+const animateChainedEffect = (arr, element, delay) => {
     if ((element == null) || (!element.classList.contains("unanimated"))) return
 
     animateElement(element);

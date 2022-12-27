@@ -13,280 +13,398 @@
     <title>Projetos</title>
 </head>
 <body>
-    <div>
-        <section id="I" class="animation-children">
-            <div class="board animate__animated unanimated fadeInUp">
-                <div class="board-header">
-                    <div class="board-title">
-                        <h3>Projeto</h3> <span>Ano</span>                        
+    <section id="I" class="animation-children">
+        <div class="board animate__animated unanimated fadeInUp">
+            <div class="board-header">
+                <div class="board-title">
+                    <h3>Projeto</h3> <span>Ano</span>                        
+                </div>
+                <div class="board-tagfield">
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                </div>
+            </div>
+            <div class="board-body">
+                <div class="board-left">
+                    <div class="board-menu">
+                        <ul>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item1" name="listMenu-i" checked="check"/>
+                                <label class="menu-item" for="listMenu-item1" data-section="I" data-scene="1">Cena 1</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item2" name="listMenu-i"/>
+                                <label class="menu-item" for="listMenu-item2" data-section="I" data-scene="2">Cena 2</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item3" name="listMenu-i"/>
+                                <label class="menu-item" for="listMenu-item3" data-section="I" data-scene="3">Cena 3</label>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="board-tagfield">
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
+                    <div class="board-menu-dropdown">
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-button" data-index="0">
+                                <div class="dropdown-selected">
+                                    Cena 1
+                                </div>
+                                <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                            <ol class="dropdown-content">
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item1" name="listMenu-i"/>
+                                    <label class="menu-item" for="listMenu-item1" data-section="I" data-scene="1">Cena 1</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item1" name="listMenu-i"/>
+                                    <label class="menu-item" for="listMenu-item2" data-section="I" data-scene="2">Cena 2</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item1" name="listMenu-i"/>
+                                    <label class="menu-item" for="listMenu-item3" data-section="I" data-scene="3">Cena 3</label>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="board-body">
-                    <div class="board-left">
-                        <div class="board-menu">
-                            <ul>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item1" name="boardMenu-i" checked="check"/>
-                                    <label class="board-item" for="boardMenu-item1" data-section="I" data-scene="1">Cena 1</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item2" name="boardMenu-i"/>
-                                    <label class="board-item" for="boardMenu-item2" data-section="I" data-scene="2">Cena 2</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item3" name="boardMenu-i"/>
-                                    <label class="board-item" for="boardMenu-item3" data-section="I" data-scene="3">Cena 3</label>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="board-right">
+                    <div class="board-content animate__animated current-scene" data-section="I">
+                        <img src="http://lorempixel.com.br/400/300/?1">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
-                    <div class="board-right">
-                        <div class="board-content animate__animated current-scene" data-section="I">
-                            <img src="http://lorempixel.com.br/400/300/?1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="I">
-                            <img src="http://lorempixel.com.br/400/300/?10">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="I">
-                            <img src="http://lorempixel.com.br/400/300/?11">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
+                    <div class="board-content animate__animated hidden" data-section="I">
+                        <img src="http://lorempixel.com.br/400/300/?10">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
+                    </div>
+                    <div class="board-content animate__animated hidden" data-section="I">
+                        <img src="http://lorempixel.com.br/400/300/?11">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="II" class="animation-children">
-            <div class="board animate__animated unanimated fadeInUp">
-                <div class="board-header">
-                    <div class="board-title">
-                        <h3>Projeto</h3> <span>Ano</span>                        
+        </div>
+    </section>
+    <section id="II" class="animation-children">
+        <div class="board animate__animated unanimated fadeInUp">
+            <div class="board-header">
+                <div class="board-title">
+                    <h3>Projeto</h3> <span>Ano</span>                        
+                </div>
+                <div class="board-tagfield">
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                </div>
+            </div>
+            <div class="board-body">
+                <div class="board-left">
+                    <div class="board-menu">
+                        <ul>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item4" name="listMenu-ii" checked="check"/>
+                                <label class="menu-item" for="listMenu-item4" data-section="II" data-scene="1">Cena 1</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item5" name="listMenu-ii"/>
+                                <label class="menu-item" for="listMenu-item5" data-section="II" data-scene="2">Cena 2</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item6" name="listMenu-ii"/>
+                                <label class="menu-item" for="listMenu-item6" data-section="II" data-scene="3">Cena 3</label>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="board-tagfield">
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
+                    <div class="board-menu-dropdown">
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-button" data-index="1">
+                                <div class="dropdown-selected">
+                                    Cena 1
+                                </div>
+                                <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                            <ol class="dropdown-content">
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item4" name="listMenu-ii"/>
+                                    <label class="menu-item" for="listMenu-item4" data-section="II" data-scene="1">Cena 1</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item5" name="listMenu-ii"/>
+                                    <label class="menu-item" for="listMenu-item5" data-section="II" data-scene="2">Cena 2</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item6" name="listMenu-ii"/>
+                                    <label class="menu-item" for="listMenu-item6" data-section="II" data-scene="3">Cena 3</label>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="board-body">
-                    <div class="board-left">
-                        <div class="board-menu">
-                            <ul>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item4" name="boardMenu-ii" checked="check"/>
-                                    <label class="board-item" for="boardMenu-item4" data-section="II" data-scene="1">Cena 1</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item5" name="boardMenu-ii"/>
-                                    <label class="board-item" for="boardMenu-item5" data-section="II" data-scene="2">Cena 2</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item6" name="boardMenu-ii"/>
-                                    <label class="board-item" for="boardMenu-item6" data-section="II" data-scene="3">Cena 3</label>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="board-right">
+                    <div class="board-content animate__animated current-scene" data-section="II">
+                        <img src="http://lorempixel.com.br/400/300/?2">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
-                    <div class="board-right">
-                        <div class="board-content animate__animated current-scene" data-section="II">
-                            <img src="http://lorempixel.com.br/400/300/?2">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="II">
-                            <img src="http://lorempixel.com.br/400/300/?20">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="II">
-                            <img src="http://lorempixel.com.br/400/300/?22">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
+                    <div class="board-content animate__animated hidden" data-section="II">
+                        <img src="http://lorempixel.com.br/400/300/?20">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
+                    </div>
+                    <div class="board-content animate__animated hidden" data-section="II">
+                        <img src="http://lorempixel.com.br/400/300/?22">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="III" class="animation-children">
-            <div class="board animate__animated unanimated fadeInUp">
-                <div class="board-header">
-                    <div class="board-title">
-                        <h3>Projeto</h3> <span>Ano</span>                        
+        </div>
+    </section>
+    <section id="III" class="animation-children">
+        <div class="board animate__animated unanimated fadeInUp">
+            <div class="board-header">
+                <div class="board-title">
+                    <h3>Projeto</h3> <span>Ano</span>                        
+                </div>
+                <div class="board-tagfield">
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                </div>
+            </div>
+            <div class="board-body">
+                <div class="board-left">
+                    <div class="board-menu">
+                        <ul>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item7" name="listMenu-iii" checked="check"/>
+                                <label class="menu-item" for="listMenu-item7" data-section="III" data-scene="1">Cena 1</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item8" name="listMenu-iii"/>
+                                <label class="menu-item" for="listMenu-item8" data-section="III" data-scene="2">Cena 2</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item9" name="listMenu-iii"/>
+                                <label class="menu-item" for="listMenu-item9" data-section="III" data-scene="3">Cena 3</label>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="board-tagfield">
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
+                    <div class="board-menu-dropdown">
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-button" data-index="2">
+                                <div class="dropdown-selected">
+                                    Cena 1
+                                </div>
+                                <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                            <ol class="dropdown-content">
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item7" name="listMenu-iii"/>
+                                    <label class="menu-item" for="listMenu-item7" data-section="III" data-scene="1">Cena 1</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item8" name="listMenu-iii"/>
+                                    <label class="menu-item" for="listMenu-item8" data-section="III" data-scene="2">Cena 2</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item9" name="listMenu-iii"/>
+                                    <label class="menu-item" for="listMenu-item9" data-section="III" data-scene="3">Cena 3</label>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="board-body">
-                    <div class="board-left">
-                        <div class="board-menu">
-                            <ul>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item7" name="boardMenu-iii" checked="check"/>
-                                    <label class="board-item" for="boardMenu-item7" data-section="III" data-scene="1">Cena 1</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item8" name="boardMenu-iii"/>
-                                    <label class="board-item" for="boardMenu-item8" data-section="III" data-scene="2">Cena 2</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item9" name="boardMenu-iii"/>
-                                    <label class="board-item" for="boardMenu-item9" data-section="III" data-scene="3">Cena 3</label>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="board-right">
+                    <div class="board-content animate__animated current-scene" data-section="III">
+                        <img src="http://lorempixel.com.br/400/300/?3">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
-                    <div class="board-right">
-                        <div class="board-content animate__animated current-scene" data-section="III">
-                            <img src="http://lorempixel.com.br/400/300/?3">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="III">
-                            <img src="http://lorempixel.com.br/400/300/?30">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="III">
-                            <img src="http://lorempixel.com.br/400/300/?44">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
+                    <div class="board-content animate__animated hidden" data-section="III">
+                        <img src="http://lorempixel.com.br/400/300/?30">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
+                    </div>
+                    <div class="board-content animate__animated hidden" data-section="III">
+                        <img src="http://lorempixel.com.br/400/300/?44">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="IV" class="animation-children">
-            <div class="board animate__animated unanimated fadeInUp">
-                <div class="board-header">
-                    <div class="board-title">
-                        <h3>Projeto</h3> <span>Ano</span>                        
+        </div>
+    </section>
+    <section id="IV" class="animation-children">
+        <div class="board animate__animated unanimated fadeInUp">
+            <div class="board-header">
+                <div class="board-title">
+                    <h3>Projeto</h3> <span>Ano</span>                        
+                </div>
+                <div class="board-tagfield">
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                </div>
+            </div>
+            <div class="board-body">
+                <div class="board-left">
+                    <div class="board-menu">
+                        <ul>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item10" name="listMenu-iv" checked="check"/>
+                                <label class="menu-item" for="listMenu-item10" data-section="IV" data-scene="1">Cena 1</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item11" name="listMenu-iv"/>
+                                <label class="menu-item" for="listMenu-item11" data-section="IV" data-scene="2">Cena 2</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item12" name="listMenu-iv"/>
+                                <label class="menu-item" for="listMenu-item12" data-section="IV" data-scene="3">Cena 3</label>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="board-tagfield">
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
+                    <div class="board-menu-dropdown">
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-button" data-index="3">
+                                <div class="dropdown-selected">
+                                    Cena 1
+                                </div>
+                                <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                            <ol class="dropdown-content">
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item10" name="listMenu-iv"/>
+                                    <label class="menu-item" for="listMenu-item10" data-section="IV" data-scene="1">Cena 1</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item11" name="listMenu-iv"/>
+                                    <label class="menu-item" for="listMenu-item11" data-section="IV" data-scene="2">Cena 2</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item12" name="listMenu-iv"/>
+                                    <label class="menu-item" for="listMenu-item12" data-section="IV" data-scene="3">Cena 3</label>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="board-body">
-                    <div class="board-left">
-                        <div class="board-menu">
-                            <ul>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item10" name="boardMenu-iv" checked="check"/>
-                                    <label class="board-item" for="boardMenu-item10" data-section="IV" data-scene="1">Cena 1</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item11" name="boardMenu-iv"/>
-                                    <label class="board-item" for="boardMenu-item11" data-section="IV" data-scene="2">Cena 2</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item12" name="boardMenu-iv"/>
-                                    <label class="board-item" for="boardMenu-item12" data-section="IV" data-scene="3">Cena 3</label>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="board-right">
+                    <div class="board-content animate__animated current-scene" data-section="IV">
+                        <img src="http://lorempixel.com.br/400/300/?4">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
-                    <div class="board-right">
-                        <div class="board-content animate__animated current-scene" data-section="IV">
-                            <img src="http://lorempixel.com.br/400/300/?4">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="IV">
-                            <img src="http://lorempixel.com.br/400/300/?40">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="IV">
-                            <img src="http://lorempixel.com.br/400/300/?44">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
+                    <div class="board-content animate__animated hidden" data-section="IV">
+                        <img src="http://lorempixel.com.br/400/300/?40">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
+                    </div>
+                    <div class="board-content animate__animated hidden" data-section="IV">
+                        <img src="http://lorempixel.com.br/400/300/?44">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="V" class="animation-children">
-            <div class="board animate__animated unanimated fadeInUp">
-                <div class="board-header">
-                    <div class="board-title">
-                        <h3>Projeto</h3> <span>Ano</span>                        
+        </div>
+    </section>
+    <section id="V" class="animation-children">
+        <div class="board animate__animated unanimated fadeInUp">
+            <div class="board-header">
+                <div class="board-title">
+                    <h3>Projeto</h3> <span>Ano</span>                        
+                </div>
+                <div class="board-tagfield">
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                    <span class="tag">tag</span>
+                </div>
+            </div>
+            <div class="board-body">
+                <div class="board-left">
+                    <div class="board-menu">
+                        <ul>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item13" name="listMenu-v" checked="check"/>
+                                <label class="menu-item" for="listMenu-item13" data-section="V" data-scene="1">Cena 1</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item14" name="listMenu-v"/>
+                                <label class="menu-item" for="listMenu-item14" data-section="V" data-scene="2">Cena 2</label>
+                            </li>
+                            <li class="board-item">
+                                <input type="radio" id="listMenu-item15" name="listMenu-v"/>
+                                <label class="menu-item" for="listMenu-item15" data-section="V" data-scene="3">Cena 3</label>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="board-tagfield">
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
-                        <span class="tag">tag</span>
+                    <div class="board-menu-dropdown">
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-button" data-index="4">
+                                <div class="dropdown-selected">
+                                    Cena 1
+                                </div>
+                                <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                            <ol class="dropdown-content">
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item13" name="listMenu-v"/>
+                                    <label class="menu-item" for="listMenu-item13" data-section="V" data-scene="1">Cena 1</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item14" name="listMenu-v"/>
+                                    <label class="menu-item" for="listMenu-item14" data-section="V" data-scene="2">Cena 2</label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <input type="radio" id="listMenu-item15" name="listMenu-v"/>
+                                    <label class="menu-item" for="listMenu-item15" data-section="V" data-scene="3">Cena 3</label>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="board-body">
-                    <div class="board-left">
-                        <div class="board-menu">
-                            <ul>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item13" name="boardMenu-v" checked="check"/>
-                                    <label class="board-item" for="boardMenu-item13" data-section="V" data-scene="1">Cena 1</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item14" name="boardMenu-v"/>
-                                    <label class="board-item" for="boardMenu-item14" data-section="V" data-scene="2">Cena 2</label>
-                                </li>
-                                <li class="boardMenu-item">
-                                    <input type="radio" id="boardMenu-item15" name="boardMenu-v"/>
-                                    <label class="board-item" for="boardMenu-item15" data-section="V" data-scene="3">Cena 3</label>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="board-right">
+                    <div class="board-content animate__animated current-scene" data-section="V">
+                        <img src="http://lorempixel.com.br/400/300/?5">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
-                    <div class="board-right">
-                        <div class="board-content animate__animated current-scene" data-section="V">
-                            <img src="http://lorempixel.com.br/400/300/?5">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="V">
-                            <img src="http://lorempixel.com.br/400/300/?50">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
-                        <div class="board-content animate__animated hidden" data-section="V">
-                            <img src="http://lorempixel.com.br/400/300/?55">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
-                            </p>
-                        </div>
+                    <div class="board-content animate__animated hidden" data-section="V">
+                        <img src="http://lorempixel.com.br/400/300/?50">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
+                    </div>
+                    <div class="board-content animate__animated hidden" data-section="V">
+                        <img src="http://lorempixel.com.br/400/300/?55">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat eget odio eget pretium. Vestibulum at eros ac nisi tristique iaculis faucibus vel sem. Proin blandit odio congue velit dictum, sit amet ullamcorper orci blandit. Donec sem justo, vulputate eget enim non, rhoncus sagittis diam. Fusce ligula arcu, elementum quis mi sit amet, ultricies placerat nulla. In tempor justo et quam pellentesque, eget vulputate lacus egestas. Etiam at nisi libero. Phasellus feugiat, urna at tincidunt pellentesque, risus justo hendrerit purus, sed mattis justo urna gravida nisl. Fusce sit amet faucibus sapien. 
+                        </p>
                     </div>
                 </div>
             </div>
-    </div>
-</div>
+        </div>
+    </section>
 <a href="/home" class="backBtn">
-    <i class="bi bi-arrow-left-circle-fill"></i>
+    <i class="back-icon bi bi-arrow-left-circle-fill"></i>
 </a>
 </body>
 </html>
