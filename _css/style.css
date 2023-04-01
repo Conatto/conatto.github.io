@@ -1,10 +1,10 @@
 ::-webkit-scrollbar { width: .5rem; }
 ::-webkit-scrollbar-track { background: #444; }
-::-webkit-scrollbar-thumb { background: greenyellow; }
+::-webkit-scrollbar-thumb { background: #B2FF19; }
 ::-webkit-scrollbar-thumb:hover { background: white; }
 * {
     font-family: sans-serif;
-    color: greenyellow;
+    color: #B2FF19;
 }
 html, body { 
     width: 100%;
@@ -26,7 +26,7 @@ body {
 a { text-decoration: none; }
     a:hover { color: white; }
 hr { 
-    border-color: greenyellow;
+    border-color: #B2FF19;
     width: 100%;
 }
 a.backBtn {
@@ -72,7 +72,7 @@ ol {
         pointer-events: none;
     }
 .dropdown-selected {
-    color: greenyellow;
+    color: #B2FF19;
     font-size: 1rem;
     font-weight: bold;
     user-select: none;
@@ -96,7 +96,7 @@ ol {
 .dropdown-content li {
     border-bottom-left-radius: .25rem;
     border-bottom-right-radius: .25rem;
-    color: greenyellow;
+    color: #B2FF19;
     font-weight: bold;
 }
     .dropdown-content li:hover {
@@ -172,7 +172,7 @@ footer {
 }
 .button {
     padding: .25rem;
-    border: 1px solid greenyellow;
+    border: 1px solid #B2FF19;
     border-radius: .25rem;
     font-weight: bold;
 }
@@ -205,7 +205,7 @@ footer {
     display: flex;
     height: fit-content;
     padding: .5rem 1rem;
-    border-top: 2px solid greenyellow;
+    border-top: 2px solid #B2FF19;
 }
     .card-tagfield > span {
         margin: .25rem;
@@ -306,7 +306,7 @@ section {
 }
 .board-left {
     width: 100%;
-    border-right: 2px solid greenyellow;
+    border-right: 2px solid #B2FF19;
 }
 .board-right {
     display: grid;
@@ -315,8 +315,8 @@ section {
 .board-menu-dropdown {
     display: none;
     justify-content: center;
-    border-top: 2px solid greenyellow;
-    border-bottom: 2px solid greenyellow;
+    border-top: 2px solid #B2FF19;
+    border-bottom: 2px solid #B2FF19;
 }
 .board-menu {
     display: flex;
@@ -367,7 +367,7 @@ section {
 .tag {
     display: flex;
     background-color: rgba(10, 10, 10, .1);
-    color: #FF8552;
+    color: #FDA115;
     height: 1.5rem;
     font-size: .75rem;
     border-radius: .5rem;
