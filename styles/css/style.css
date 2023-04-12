@@ -18,7 +18,7 @@ html, body {
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 .scroll-hidden {
     overflow: hidden;
@@ -232,6 +232,16 @@ footer {
     justify-content: center;
     align-items: flex-end;
 }
+.card-content-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-text-placeholder {
+    text-shadow: 1px 1px 1px black;
+    color: #606060;
+}
+
 .footer-left {
     margin-left: 3rem;
 }
