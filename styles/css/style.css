@@ -239,11 +239,8 @@ footer {
 .card {
     display: grid;
     height: 100%;
-    grid-template-rows: 3rem 10rem 3rem auto 2rem;
+    grid-template-rows: 3rem 10rem 3rem 10rem 2rem;
     gap: .5rem;
-}
-.card-image, .card-content {
-    height: 10rem;
 }
 .card-head, .card-image, .card-content {
     display: flex;
@@ -293,14 +290,19 @@ footer {
     justify-content: center;
     align-items: flex-end;
 }
+.card-placeholder {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 3rem auto;
+    gap: .5rem;
+}
 .card-content-placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .card-text-placeholder {
-    text-shadow: 1px 1px 1px black;
-    color: #606060;
+    color: rgba(255, 255, 255, .2);
 }
 
 .footer-left {
