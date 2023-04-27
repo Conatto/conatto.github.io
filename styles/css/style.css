@@ -223,7 +223,7 @@ footer {
 }
 .button {
     display: block;
-    padding: .25rem;
+    padding: .5rem;
     border: 1px solid #B2FF19;
     border-radius: .25rem;
     text-align: center;
@@ -549,6 +549,7 @@ section {
     .board-links {
         display: flex;
         flex-direction: column;
+        width: fit-content;
     }
     .board-links > .button {
         margin: .5rem;
