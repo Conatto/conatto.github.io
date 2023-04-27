@@ -9,6 +9,7 @@ window.onload = function() {
     if (document.getElementsByTagName('title')[0].innerHTML === "Projetos") {
         animationDelay = 0; allowScroll = false;
         bindDropdownEvents();
+        hideSections();
     }
     
     setTimeout(() => {
@@ -43,6 +44,47 @@ const bindDropdownEvents = () => {
             });
         });
     }
+    const projectPics = Array.from(document.getElementsByClassName('board-figure'));
+    if (projectPics.length > 0 || projectPics !== null) {
+        projectPics.forEach(picture => {
+            addEvent(picture, 'mouseover', () => {
+                picture.getElementsByClassName('fullscreen-icon')[0].classList.remove('hidden');
+            });
+            addEvent(picture, 'mouseout', () => {
+                picture.getElementsByClassName('fullscreen-icon')[0].classList.add('hidden');
+            });
+            addEvent(picture, 'click', () => {
+                const srcString = picture.getElementsByTagName('img')[0].src.split('static/');                
+                const modal = document.getElementsByClassName('modal')[0];
+
+                const imgEl = modal.getElementsByTagName('img')[0];
+                imgEl.src = './static/' + srcString.pop();
+                modal.classList.remove('hidden');
+                imgEl.classList.add('animate__zoomIn');
+            });
+        });
+    }
+    const modalCloseBtn = Array.from(document.getElementsByClassName('close-icon'));
+    if (modalCloseBtn.length > 0 || modalCloseBtn !== null) {
+        modalCloseBtn.forEach(button => {
+            addEvent(button, 'click', () => {
+                let target = button;
+                do {
+                    target = target.parentNode;
+                } while (!target.classList.contains('modal'));
+
+                const modal = target;
+                const imgEl = modal.getElementsByTagName('img')[0];
+
+                imgEl.classList.remove('animate__zoomIn');
+                imgEl.classList.add('animate__zoomOut');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    imgEl.classList.remove('animate__zoomOut');
+                }, 500);
+            });       
+        });
+    }
     addEvent(document, 'click', () => { closeAllDropdowns(window.event.target); });
 }
 const toggleDropdown = (button) => {
@@ -68,6 +110,15 @@ const closeAllDropdowns = (element) => {
         if (ol.classList.contains('show')) {
             ol.classList.remove('show');
         }
+    });
+}
+
+const hideSections = () => {
+    const sections = Array.from(document.getElementsByTagName("section"));
+    const targetSection = document.URL.split("#").pop();
+    sections.forEach(section => {
+        if (section.getAttribute("id") !== targetSection) 
+            section.classList.add('unavailable');
     });
 }
 

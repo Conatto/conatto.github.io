@@ -15,11 +15,47 @@ html, body {
     scroll-behavior: smooth;
     background-color: #555;
 }
+.hidden {
+    pointer-events: none;
+}
 body {
     min-height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
 }
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgba(53, 53, 53, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.modal-figure {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 90%;
+    height: 90%;
+}
+.modal-figure > img {
+    max-width: 90%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 3px black;
+}
+i.close-icon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 3rem;
+    font-size: 3rem;
+    opacity: .6;
+}
+    i.close-icon:hover {
+        color: white;
+    }
 .scroll-hidden {
     overflow: hidden;
 }
@@ -42,7 +78,20 @@ i.back-icon {
     i.back-icon:hover {
         color: white;
     }
+i.fullscreen-icon {
+    position: absolute;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+    opacity: .6;
+    color: #B2FF19;
+    transition: opacity .2s;
 
+}
+    i.fullscreen-icon::before {
+        padding: .5rem;
+        border-radius: 1rem;
+        background-color: rgb(53, 53, 53);
+    }
 h1 { font-size: 3rem; }
 h2 { font-size: 2rem; }
 ul { list-style: none; }
@@ -128,12 +177,14 @@ footer {
     grid-template-columns: 30% 30% 30%;
     gap: 5rem;
 }
-
+.unavailable {
+    display: none;
+}
 .unanimated {
     opacity: 0;
 }
 .hidden {
-    opacity: 0
+    opacity: 0 !important;
 }
 .container {
     margin: 5% 5%;
@@ -171,19 +222,28 @@ footer {
     box-shadow: 1px 1px 5px black;
 }
 .button {
+    display: block;
     padding: .25rem;
     border: 1px solid #B2FF19;
     border-radius: .25rem;
+    text-align: center;
     font-weight: bold;
 }
     .button:hover {
         border-color: white;
+        background-color: #86b42a;
+    }
+    .button > i {
+        padding: 0 .5rem;
     }
 .card {
     display: grid;
     height: 100%;
     grid-template-rows: 3rem 10rem 3rem auto 2rem;
     gap: .5rem;
+}
+.card-image, .card-content {
+    height: 10rem;
 }
 .card-head, .card-image, .card-content {
     display: flex;
@@ -204,7 +264,7 @@ footer {
 .card-tagfield {
     display: flex;
     height: fit-content;
-    padding: .5rem 1rem;
+    padding: .5rem 0;
     border-top: 2px solid #B2FF19;
 }
     .card-tagfield > span {
@@ -217,6 +277,7 @@ footer {
 .card-content { 
     text-align: justify;
     align-items: start;
+    overflow: hidden;
 }
     .card-content > p > a {
         font-weight: bold;
@@ -283,6 +344,7 @@ section {
 }
 .board-header {
     display: flex;
+    height: auto;
     flex-direction: column;
     justify-content: space-evenly;
     grid-area: board-h;
@@ -299,7 +361,6 @@ section {
         margin: 0 1rem;
     }
 .board-tagfield {
-    display: flex;
     height: fit-content;
     padding: .5rem 2rem;
 }
@@ -308,20 +369,35 @@ section {
     }
 .board-body {
     display: flex;
+    height: auto;
     flex-direction: row;
     padding: 1rem 2rem;
     grid-area: board-b;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: auto;/*/*/
 }
 .board-left {
+    display: grid;
     width: 100%;
+    height: 100%;
     border-right: 2px solid #B2FF19;
 }
 .board-right {
     display: grid;
+    height: fit-content;
     grid-template-areas: 'board-c';
 }
+.board-links {
+    display: flex;
+    width: 100%;
+    justify-self: center;
+    align-self: end;
+    padding: 1rem 0;
+}
+    .board-links > .button {
+        margin: 0 5%;
+    }
+
 .board-menu-dropdown {
     display: none;
     justify-content: center;
@@ -331,6 +407,7 @@ section {
 .board-menu {
     display: flex;
     justify-content: left;
+    align-self: start;
 }
     .board-menu ul {
         flex-grow: 1;
@@ -361,21 +438,41 @@ section {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    align-items: center;
+    align-items: start;
     grid-area: board-c;
 
-    height: 100%;
+    height: fit-content;
     padding: 0 3rem;
     text-align: justify;
+    overflow-x: hidden;
     overflow-y: auto;
 }
-    .board-content > img {
-        height: 45%;
-        border-radius: 1rem;
-        box-shadow: 1px 1px 3px black;
+    .board-content > p {
+        height: inherit;
     }
+    .board-content.hidden, .board-content.animate__fadeOut { 
+        pointer-events: none;
+    }
+.board-pictures {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.board-figure {
+    display: flex;
+    position: relative;
+    justify-content: end;
+    margin: 0;
+}
+.board-figure > img {
+    height: 16rem;
+    border-radius: 1rem;
+    margin: .5rem 0;
+    box-shadow: 1px 1px 3px black;
+}
 .tag {
     display: flex;
+    float: left;
     background-color: rgba(10, 10, 10, .1);
     color: #FDA115;
     height: 1.5rem;
@@ -399,9 +496,10 @@ section {
         margin: 5rem 0;
     }
     .board {
-        grid-template-rows: 12% auto;
+        grid-template-rows: 30% auto;
         padding: 4%;
         height: 80%;
+        overflow-y: auto;
     }
     .board-body {
         flex-direction: column;
@@ -414,13 +512,8 @@ section {
     .board-menu-dropdown {
         display: flex;
     }
-    .board-content {
-        flex-direction: column;
-        gap: 0;
+    .board-tagfield {
         padding: 0;
-    }
-    .board-content > img {
-        width: 70%;
     }
     footer {
         grid-template-columns: auto;
@@ -433,9 +526,33 @@ section {
     }
 }
 @media screen and (max-width: 1024px) {
-    
+    .modal-figure {
+        flex-direction: column;
+        justify-content: start;
+    }
+    i.close-icon {
+        position: unset;
+        margin: 1rem;
+        text-align: end;
+    }
+    .board-content {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    .board-figure > img {
+        width: 100%;
+        height: auto;
+    }
 }
 @media screen and (max-width: 1128px) {
+    .board-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .board-links > .button {
+        margin: .5rem;
+    }
     .tile-frame {
         grid-template-columns: repeat(2, auto);
         gap: 3rem;
@@ -444,4 +561,5 @@ section {
     .board-content {
         padding: 0 1rem;
     }
+    
 }
