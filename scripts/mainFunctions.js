@@ -6,6 +6,10 @@ let animationDelay = 1500;
 let allowScroll = true;
 
 window.onload = function() {
+    if ((document.getElementById("yearNow") !== null) && 
+    (document.getElementById("yearNow") !== undefined))
+        document.getElementById("yearNow").innerHTML = getYearNow();
+
     if (document.getElementsByTagName('title')[0].innerHTML === "Projetos") {
         animationDelay = 0; allowScroll = false;
         bindDropdownEvents();
@@ -171,6 +175,11 @@ const animateElement = (element, prefix = 'animate__') => {
             element.classList.add(prefix + animationName);
         }
     });
+}
+
+const getYearNow = () => { 
+    const date = new Date(); 
+    return date.getFullYear();
 }
 
 // Funções Auxiliares
