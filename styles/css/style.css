@@ -302,6 +302,7 @@ footer {
     align-items: center;
 }
 .card-text-placeholder {
+    margin: 0;
     color: rgba(255, 255, 255, .2);
 }
 
@@ -380,7 +381,7 @@ section {
 }
 .board-left {
     display: grid;
-    width: 100%;
+    min-width: 20rem;
     height: 100%;
     border-right: 2px solid #B2FF19;
 }
@@ -455,6 +456,10 @@ section {
     .board-content.hidden, .board-content.animate__fadeOut { 
         pointer-events: none;
     }
+.board-text {
+    display: flex;
+    flex-direction: column;
+}
 .board-pictures {
     display: flex;
     flex-direction: column;
@@ -502,6 +507,10 @@ section {
         padding: 4%;
         height: 80%;
         overflow-y: auto;
+    }
+    .board-left {
+        min-width: 0;
+        border-right: none;
     }
     .board-body {
         flex-direction: column;
