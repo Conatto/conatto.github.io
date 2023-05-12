@@ -307,12 +307,21 @@ footer {
 }
 
 .footer-left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
     margin-left: 3rem;
 }
-    .footer-left > h4 {
+.footer-right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 3rem;
+}
+    .footer-item > h4 {
         margin-bottom: .5rem;
     }
-    .footer-left > p { 
+    .footer-item > p { 
         font-size: small;
         font-weight: bolder;
         padding-left: 1rem;
@@ -322,6 +331,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.footer-logo {
+    width: 12.5rem;
+}
+figure { 
+    margin: 0;
 }
 section {
     display: flex;
