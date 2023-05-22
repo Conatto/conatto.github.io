@@ -67,9 +67,9 @@ hr {
 }
 a.backBtn {
     position: fixed;
+    top: 0;
     right: 0;
-    bottom: 0;
-    margin: 3rem;
+    margin: 3.5rem;
 }
 i.back-icon {
     font-size: 3rem;
@@ -167,7 +167,8 @@ ol {
 }
 
 footer {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: fit-content;
     padding: 2% 0;
@@ -273,6 +274,8 @@ footer {
     }
 .card-content { 
     text-align: justify;
+    text-justify: distribute;
+    hyphens: auto;
     align-items: start;
     overflow: hidden;
 }
@@ -302,6 +305,7 @@ footer {
     align-items: center;
 }
 .card-text-placeholder {
+    user-select: none;
     margin: 0;
     color: rgba(255, 255, 255, .2);
 }
@@ -310,13 +314,11 @@ footer {
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-left: 3rem;
+    padding-left: 5rem;
 }
 .footer-right {
     display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-right: 3rem;
+    padding-right: 5rem;
 }
     .footer-item > h4 {
         margin-bottom: .5rem;
@@ -407,9 +409,9 @@ section {
 }
 .board-links {
     display: flex;
+    justify-content: center;
     width: 100%;
-    justify-self: center;
-    align-self: end;
+    align-self: center;
     padding: 1rem 0;
 }
     .board-links > .button {
@@ -462,6 +464,8 @@ section {
     height: fit-content;
     padding: 0 3rem;
     text-align: justify;
+    text-justify: distribute;
+    hyphens: auto;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -524,6 +528,9 @@ section {
         overflow-y: auto;
     }
     .board-left {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
         min-width: 0;
         border-right: none;
     }
@@ -541,42 +548,31 @@ section {
     .board-tagfield {
         padding: 0;
     }
+    i.back-icon {
+        font-size: 2.25rem;
+    }
     footer {
+        display: grid;
         grid-template-columns: auto;
+        justify-content: center;
         gap: 1rem;
         text-align: center;
     }
-    .footer-left {
-        margin: 0;
+    .footer-left, .footer-right {
         justify-self: center;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .modal-figure {
-        flex-direction: column;
-        justify-content: start;
-    }
-    i.close-icon {
-        position: unset;
-        margin: 1rem;
-        text-align: end;
-    }
-    .board-content {
-        flex-direction: column;
-        gap: 0;
         padding: 0;
     }
-    .board-figure > img {
-        width: 100%;
-        height: auto;
+    .footer-left {
+        margin: 1rem;
+    }
+    .footer-right {
+        margin: 0;
+    }
+    .footer-item > p {
+        padding: 0;
     }
 }
 @media screen and (max-width: 1128px) {
-    .board-links {
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-    }
     .board-links > .button {
         margin: .5rem;
     }
@@ -589,4 +585,24 @@ section {
         padding: 0 1rem;
     }
     
+}
+@media screen and (max-width: 1218px) {
+    .modal-figure {
+        flex-direction: column;
+        justify-content: start;
+    }
+    i.close-icon {
+        position: unset;
+        margin: 1rem;
+        text-align: end;
+    }
+    .board-content {
+        flex-direction: column;
+        gap: 0;
+        padding: 2rem;
+    }
+    .board-figure > img {
+        width: 100%;
+        height: auto;
+    }
 }
