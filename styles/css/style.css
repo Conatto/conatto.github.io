@@ -261,6 +261,7 @@ footer {
 }
 .card-tagfield {
     display: flex;
+    justify-content: center;
     height: fit-content;
     padding: .5rem 0;
     border-top: 2px solid #B2FF19;
