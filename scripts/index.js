@@ -3,10 +3,6 @@ const animationList = ['fadeInUp'];
 const animationDelay = 1500;
 
 window.onload = function() {
-    if ((document.getElementById("yearNow") !== null) && 
-    (document.getElementById("yearNow") !== undefined))
-        document.getElementById("yearNow").innerHTML = getYearNow();
-    
     setTimeout(() => {
         observerTo('animation-children', animateObserver);
         document.getElementsByTagName('html')[0].style.overflowY = 'scroll'
@@ -48,11 +44,6 @@ const animateElement = (element, prefix = 'animate__') => {
             element.classList.add(prefix + animationName);
         }
     });
-}
-
-const getYearNow = () => { 
-    const date = new Date(); 
-    return date.getFullYear();
 }
 
 // Funções Auxiliares
