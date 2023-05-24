@@ -3,6 +3,8 @@ const animationList = ['fadeInUp'];
 const animationDelay = 1500;
 
 window.onload = function() {
+    document.getElementsByClassName("loader")[0].remove();
+    
     setTimeout(() => {
         observerTo('animation-children', animateObserver);
         document.getElementsByTagName('html')[0].style.overflowY = 'scroll'

@@ -3,6 +3,8 @@ const animateShowUpScene = "animate__fadeIn"
 const animateShowOutScene = "animate__fadeOut"
 
 window.onload = function() {
+    document.getElementsByClassName("loader")[0].remove();
+    
     bindEvents();
     hideSections();
     observerTo('animation-children', animateObserver);
