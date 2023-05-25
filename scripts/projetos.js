@@ -3,8 +3,7 @@ const animateShowUpScene = "animate__fadeIn"
 const animateShowOutScene = "animate__fadeOut"
 
 window.onload = function() {
-    document.getElementsByClassName("loader")[0].remove();
-    
+    removeLoader();
     bindEvents();
     hideSections();
     observerTo('animation-children', animateObserver);
@@ -147,6 +146,13 @@ const changeSceneBoard = (next) => {
     }
     nextScene.classList.add(animateShowUpScene);
     nextScene.classList.add('current-scene');
+}
+
+const removeLoader = () => {
+    const loaderEl = document.getElementsByClassName("loader")[0];
+
+    addEvent(loaderEl, 'animationend', () => { loaderEl.remove(); })
+    loaderEl.classList.add("fade-animation");
 }
 
 // Funções Auxiliares

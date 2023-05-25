@@ -745,6 +745,10 @@ section {
         font-family: conthrax;
         color: var(--highlight-color);
     }
+.fade-animation {
+    -webkit-animation: fade 0.15s ease;
+            animation: fade 0.15s ease;
+}
 @-webkit-keyframes loading {
     from { -webkit-transform: rotate(0turn); transform: rotate(0turn); }
     to { -webkit-transform: rotate(1turn); transform: rotate(1turn); }
@@ -752,6 +756,14 @@ section {
 @keyframes loading {
     from { -webkit-transform: rotate(0turn); transform: rotate(0turn); }
     to { -webkit-transform: rotate(1turn); transform: rotate(1turn); }
+}
+@-webkit-keyframes fade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes fade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 @media screen and (max-width: 756px) {

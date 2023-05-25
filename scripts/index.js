@@ -3,7 +3,7 @@ const animationList = ['fadeInUp'];
 const animationDelay = 1500;
 
 window.onload = function() {
-    document.getElementsByClassName("loader")[0].remove();
+    removeLoader();
     
     setTimeout(() => {
         observerTo('animation-children', animateObserver);
@@ -47,8 +47,21 @@ const animateElement = (element, prefix = 'animate__') => {
         }
     });
 }
+const removeLoader = () => {
+    const loaderEl = document.getElementsByClassName("loader")[0];
+
+    addEvent(loaderEl, 'animationend', () => { loaderEl.remove(); })
+    loaderEl.classList.add("fade-animation");
+}
 
 // Funções Auxiliares
+function addEvent(element, event, func) {
+    if (element.attachEvent)
+        return element.attachEvent('on'+event, func);
+    else
+        return element.addEventListener(event, func, false);
+}
+
 const observerTo = (targetClass, observer) => {
     Array.from(document.getElementsByClassName(targetClass)).forEach(key => {
         observer.observe(key);
