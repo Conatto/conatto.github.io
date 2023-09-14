@@ -1,4 +1,4 @@
-const welcomeMessage = ["Olá!", "Conheça meus projetos"]
+const welcomeMessage = ["Novidades em breve..."]
 const animationList = ['fadeInUp'];
 const animationDelay = 1500;
 
