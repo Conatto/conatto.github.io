@@ -4730,6 +4730,48 @@ sup, sub {
   margin-top: 5rem;
 }
 
+#soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: bottom;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.soon-header {
+  width: max-content;
+  z-index: 1;
+  text-align: center;
+}
+.soon-header h1, .soon-header span {
+  user-select: none;
+}
+.soon-header .soon-header-title {
+  font-family: "conthrax";
+  font-size: 3.5rem;
+  display: inline-flex;
+  line-height: 1;
+}
+@media only screen and (min-width: 768px) {
+  .soon-header .soon-header-title {
+    margin: 0;
+    font-size: 4rem;
+  }
+}
+.soon-header .soon-header-subtitle {
+  font-size: 2.25rem;
+  display: block;
+  line-height: 1;
+  color: #fda115;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .soon-header .soon-header-subtitle {
+    font-size: 3.5rem;
+  }
+}
+
 .fade-animation {
   -webkit-animation: fade 0.15s ease;
   animation: fade 0.15s ease;

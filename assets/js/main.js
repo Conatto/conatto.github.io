@@ -1,4 +1,4 @@
-const typerMessage = ["Desenvolvedor Web"]
+const typerMessage = ["Fique ligado..."]
 
 document.addEventListener("DOMContentLoaded", function () {
   const preloaderEl = document.getElementsByClassName("preloader")[0];
